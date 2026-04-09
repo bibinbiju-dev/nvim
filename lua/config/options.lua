@@ -9,10 +9,11 @@ vim.opt.guicursor = {
   "c:block", -- command
   "r:block", -- replace
 }
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
+vim.opt.wrap = true
 -- vim.opt.updatetime = 300
 -- vim.opt.timeoutlen = 400
 -- vim.opt.redrawtime = 1500

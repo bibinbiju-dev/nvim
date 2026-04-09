@@ -1,0 +1,121 @@
+-- return {
+--   "hrsh7th/nvim-cmp",
+--   event = { "InsertEnter", "CmdlineEnter" }, -- LAZY LOAD
+--   dependencies = {
+--     "hrsh7th/cmp-nvim-lsp",
+--     "hrsh7th/cmp-buffer",
+--     "hrsh7th/cmp-path",
+--     "hrsh7th/cmp-cmdline",
+--
+--     -- Snippets
+--     {
+--       "L3MON4D3/LuaSnip",
+--       dependencies = { "rafamadriz/friendly-snippets" },
+--       build = "make install_jsregexp",
+--       config = function()
+--         require("luasnip.loaders.from_vscode").lazy_load()
+--       end,
+--     },
+--     "saadparwaiz1/cmp_luasnip",
+--
+--     -- Autopairs (lazy)
+--     {
+--       "windwp/nvim-autopairs",
+--       event = "InsertEnter",
+--       config = true,
+--     },
+--   },
+--
+--   config = function()
+--     local cmp = require("cmp")
+--     local luasnip = require("luasnip")
+--
+--     cmp.setup({
+--       snippet = {
+--         expand = function(args)
+--           luasnip.lsp_expand(args.body)
+--         end,
+--       },
+--       mapping = cmp.mapping.preset.insert({
+--         ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+--         ["<C-f>"] = cmp.mapping.scroll_docs(4),
+--         ["<C-Space>"] = cmp.mapping.complete(),
+--         ["<CR>"] = cmp.mapping.confirm({ select = true }),
+--
+--         ["<Tab>"] = cmp.mapping(function(fallback)
+--           if cmp.visible() then
+--             cmp.select_next_item()
+--           elseif luasnip.expand_or_jumpable() then
+--             luasnip.expand_or_jump()
+--           else
+--             fallback()
+--           end
+--         end, { "i", "s" }),
+--
+--         ["<S-Tab>"] = cmp.mapping(function(fallback)
+--           if cmp.visible() then
+--             cmp.select_prev_item()
+--           elseif luasnip.jumpable(-1) then
+--             luasnip.jump(-1)
+--           else
+--             fallback()
+--           end
+--         end, { "i", "s" }),
+--       }),
+--
+--       sources = cmp.config.sources({
+--         { name = "nvim_lsp" },
+--         { name = "luasnip" },
+--         { name = "buffer" },
+--         { name = "path" },
+--       }),
+--     })
+--
+--     -- CMDLINE COMPLETIONS ------------------------------------
+--     cmp.setup.cmdline(":", {
+--       mapping = cmp.mapping.preset.cmdline(),
+--       sources = {
+--         { name = "path" },
+--         { name = "cmdline" },
+--       },
+--     })
+--   end,
+-- }
+--
+-- return {
+--   {
+--     "hrsh7th/cmp-cmdline",
+--     dependencies = { "hrsh7th/nvim-cmp" },
+--     event = "CmdlineEnter",
+--   },
+--   {
+--     "hrsh7th/cmp-path",
+--     dependencies = { "hrsh7th/nvim-cmp" },
+--     event = "CmdlineEnter",
+--   },
+--
+--   {
+--     "hrsh7th/nvim-cmp",
+--     event = { "InsertEnter", "CmdlineEnter" },
+--     dependencies = {
+--       "hrsh7th/cmp-buffer",
+--       "hrsh7th/cmp-path",
+--       "hrsh7th/cmp-cmdline",
+--     },
+--     opts = function(_, opts)
+--       local cmp = require("cmp")
+--       opts.mapping = cmp.mapping.preset.insert(opts.mapping or {})
+--       cmp.setup.cmdline({ "/", "?" }, {
+--         mapping = cmp.mapping.preset.cmdline(),
+--         sources = {
+--           { name = "buffer" },
+--         },
+--       })
+--       cmp.setup.cmdline(":", {
+--         mapping = cmp.mapping.preset.cmdline(),
+--         sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
+--       })
+--       return opts
+--     end,
+--   },
+-- }
