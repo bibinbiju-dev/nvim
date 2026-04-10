@@ -4,5 +4,3 @@
 
 vim.keymap.set("n", "<leader>ha", ":Alpha<CR>", { desc = "Open Dashboard" })
 vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
-
-
