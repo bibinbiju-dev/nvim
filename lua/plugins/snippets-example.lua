@@ -1,58 +1,58 @@
--- return {
---   "hrsh7th/nvim-cmp",
---   event = { "InsertEnter", "CmdlineEnter" },
---   dependencies = {
---     "hrsh7th/cmp-buffer",
---     "hrsh7th/cmp-path",
---     "hrsh7th/cmp-cmdline",
---     "nvim-mini/mini.snippets", -- 👈 ADD THIS
---   },
---
---   opts = function(_, opts)
---     local cmp = require("cmp")
---     local mini_snippets = require("mini.snippets")
---
---     -- 👇 REQUIRED: tell cmp how to expand snippets
---     opts.snippet = {
---       expand = function(args)
---         mini_snippets.expand_snippet(args.body)
---       end,
---     }
---
---     -- 👇 IMPORTANT: Tab behavior
---     opts.mapping = cmp.mapping.preset.insert(vim.tbl_extend("force", opts.mapping or {}, {
---       ["<Tab>"] = cmp.mapping(function(fallback)
---         if cmp.visible() then
---           cmp.select_next_item()
---         elseif mini_snippets.expand_or_jumpable() then
---           mini_snippets.expand_or_jump()
---         else
---           fallback()
---         end
---       end, { "i", "s" }),
---
---       ["<S-Tab>"] = cmp.mapping(function(fallback)
---         if mini_snippets.jumpable(-1) then
---           mini_snippets.jump(-1)
---         else
---           fallback()
---         end
---       end, { "i", "s" }),
---     }))
---
---     -- cmdline setup (keep your existing)
---     cmp.setup.cmdline({ "/", "?" }, {
---       mapping = cmp.mapping.preset.cmdline(),
---       sources = {
---         { name = "buffer" },
---       },
---     })
---
---     cmp.setup.cmdline(":", {
---       mapping = cmp.mapping.preset.cmdline(),
---       sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
---     })
---
---     return opts
---   end,
--- }
+return {
+  --   "hrsh7th/nvim-cmp",
+  --   event = { "InsertEnter", "CmdlineEnter" },
+  --   dependencies = {
+  --     "hrsh7th/cmp-buffer",
+  --     "hrsh7th/cmp-path",
+  --     "hrsh7th/cmp-cmdline",
+  --     "nvim-mini/mini.snippets", -- 👈 ADD THIS
+  --   },
+  --
+  --   opts = function(_, opts)
+  --     local cmp = require("cmp")
+  --     local mini_snippets = require("mini.snippets")
+  --
+  --     -- 👇 REQUIRED: tell cmp how to expand snippets
+  --     opts.snippet = {
+  --       expand = function(args)
+  --         mini_snippets.expand_snippet(args.body)
+  --       end,
+  --     }
+  --
+  --     -- 👇 IMPORTANT: Tab behavior
+  --     opts.mapping = cmp.mapping.preset.insert(vim.tbl_extend("force", opts.mapping or {}, {
+  --       ["<Tab>"] = cmp.mapping(function(fallback)
+  --         if cmp.visible() then
+  --           cmp.select_next_item()
+  --         elseif mini_snippets.expand_or_jumpable() then
+  --           mini_snippets.expand_or_jump()
+  --         else
+  --           fallback()
+  --         end
+  --       end, { "i", "s" }),
+  --
+  --       ["<S-Tab>"] = cmp.mapping(function(fallback)
+  --         if mini_snippets.jumpable(-1) then
+  --           mini_snippets.jump(-1)
+  --         else
+  --           fallback()
+  --         end
+  --       end, { "i", "s" }),
+  --     }))
+  --
+  --     -- cmdline setup (keep your existing)
+  --     cmp.setup.cmdline({ "/", "?" }, {
+  --       mapping = cmp.mapping.preset.cmdline(),
+  --       sources = {
+  --         { name = "buffer" },
+  --       },
+  --     })
+  --
+  --     cmp.setup.cmdline(":", {
+  --       mapping = cmp.mapping.preset.cmdline(),
+  --       sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
+  --     })
+  --
+  --     return opts
+  --   end,
+}

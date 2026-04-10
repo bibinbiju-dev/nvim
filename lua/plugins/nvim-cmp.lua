@@ -82,40 +82,40 @@
 --   end,
 -- }
 --
--- return {
---   {
---     "hrsh7th/cmp-cmdline",
---     dependencies = { "hrsh7th/nvim-cmp" },
---     event = "CmdlineEnter",
---   },
---   {
---     "hrsh7th/cmp-path",
---     dependencies = { "hrsh7th/nvim-cmp" },
---     event = "CmdlineEnter",
---   },
---
---   {
---     "hrsh7th/nvim-cmp",
---     event = { "InsertEnter", "CmdlineEnter" },
---     dependencies = {
---       "hrsh7th/cmp-buffer",
---       "hrsh7th/cmp-path",
---       "hrsh7th/cmp-cmdline",
---     },
---     opts = function(_, opts)
---       local cmp = require("cmp")
---       opts.mapping = cmp.mapping.preset.insert(opts.mapping or {})
---       cmp.setup.cmdline({ "/", "?" }, {
---         mapping = cmp.mapping.preset.cmdline(),
---         sources = {
---           { name = "buffer" },
---         },
---       })
---       cmp.setup.cmdline(":", {
---         mapping = cmp.mapping.preset.cmdline(),
---         sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
---       })
---       return opts
---     end,
---   },
--- }
+return {
+  --   {
+  --     "hrsh7th/cmp-cmdline",
+  --     dependencies = { "hrsh7th/nvim-cmp" },
+  --     event = "CmdlineEnter",
+  --   },
+  --   {
+  --     "hrsh7th/cmp-path",
+  --     dependencies = { "hrsh7th/nvim-cmp" },
+  --     event = "CmdlineEnter",
+  --   },
+  --
+  --   {
+  --     "hrsh7th/nvim-cmp",
+  --     event = { "InsertEnter", "CmdlineEnter" },
+  --     dependencies = {
+  --       "hrsh7th/cmp-buffer",
+  --       "hrsh7th/cmp-path",
+  --       "hrsh7th/cmp-cmdline",
+  --     },
+  --     opts = function(_, opts)
+  --       local cmp = require("cmp")
+  --       opts.mapping = cmp.mapping.preset.insert(opts.mapping or {})
+  --       cmp.setup.cmdline({ "/", "?" }, {
+  --         mapping = cmp.mapping.preset.cmdline(),
+  --         sources = {
+  --           { name = "buffer" },
+  --         },
+  --       })
+  --       cmp.setup.cmdline(":", {
+  --         mapping = cmp.mapping.preset.cmdline(),
+  --         sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
+  --       })
+  --       return opts
+  --     end,
+  --   },
+}

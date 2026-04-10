@@ -1,5 +1,3 @@
-
-
 return {
   {
     "goolord/alpha-nvim",
@@ -17,4 +15,3 @@ return {
     end,
   },
 }
-
