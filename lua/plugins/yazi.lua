@@ -11,7 +11,7 @@ return {
       desc = "Open Yazi (file explorer)",
     },
     {
-      "<leader>cw",
+      "<leader>E",
       "<cmd>Yazi cwd<cr>",
       desc = "Yazi in working dir",
     },
