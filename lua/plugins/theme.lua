@@ -1,1 +1,0 @@
-/home/bibin/.config/omarchy/current/theme/neovim.lua
