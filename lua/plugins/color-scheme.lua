@@ -1,12 +1,30 @@
+-- return {
+-- 	{
+-- 		"folke/tokyonight.nvim",
+-- 		priority = 1000,
+-- 	},
+-- 	{
+-- 		"LazyVim/LazyVim",
+-- 		opts = {
+-- 			colorscheme = "tokyonight-night",
+-- 		},
+-- 	},
+-- }
+-- catpuccin
 return {
-	{
-		"folke/tokyonight.nvim",
-		priority = 1000,
-	},
-	{
-		"LazyVim/LazyVim",
-		opts = {
-			colorscheme = "tokyonight-night",
-		},
-	},
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    opts = {
+      -- transparent_background = false,
+    },
+  },
+
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin-mocha",
+      transparent_background = true,
+    },
+  },
 }

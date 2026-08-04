@@ -6,6 +6,7 @@
     "lazyvim.plugins.extras.editor.telescope",
     "lazyvim.plugins.extras.formatting.black",
     "lazyvim.plugins.extras.formatting.prettier",
+    "lazyvim.plugins.extras.lang.angular",
     "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.lang.python",
     "lazyvim.plugins.extras.lang.typescript",
