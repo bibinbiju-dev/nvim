@@ -17,7 +17,8 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     opts = {
-      -- transparent_background = false,
+      flavour = "mocha",
+      transparent_background = true,
     },
   },
 
@@ -25,7 +26,6 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin-mocha",
-      transparent_background = true,
     },
   },
 }
