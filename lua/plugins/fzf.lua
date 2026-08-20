@@ -1,0 +1,43 @@
+return {
+  -- "ibhagwan/fzf-lua",
+  --
+  -- opts = {
+  --   winopts = {
+  --     width = 0.85,
+  --     height = 0.85,
+  --
+  --     preview = {
+  --       layout = "vertical",
+  --       vertical = "up:65%",
+  --     },
+  --   },
+  -- },
+  --
+  -- keys = {
+  --   -- Files
+  --   {
+  --     "<leader>ff",
+  --     LazyVim.pick("files", { root = false }),
+  --     desc = "Find Files (cwd)",
+  --   },
+  --
+  --   {
+  --     "<leader>fF",
+  --     LazyVim.pick("files"),
+  --     desc = "Find Files (Root Dir)",
+  --   },
+  --
+  --   -- Grep
+  --   {
+  --     "<leader>sg",
+  --     LazyVim.pick("live_grep", { root = false }),
+  --     desc = "Grep (cwd)",
+  --   },
+  --
+  --   {
+  --     "<leader>sG",
+  --     LazyVim.pick("live_grep"),
+  --     desc = "Grep (Root Dir)",
+  --   },
+  -- },
+}

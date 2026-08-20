@@ -2,14 +2,24 @@ return {
   "nvim-telescope/telescope.nvim",
   opts = {
     defaults = {
-      layout_strategy = "vertical",
+      layout_strategy = "horizontal",
+      layout_config = {
+        vertical = {
+          width = 0.9,
+          height = 0.9,
+          preview_height = 0.65,
+        },
+      },
     },
 
-    -- pickers = {
-    --   find_files = {
-    --     theme = "dropdown",
-    --   },
-    -- },
+    pickers = {
+      find_files = {
+        layout_strategy = "horizontal",
+      },
+      live_grep = {
+        layout_strategy = "horizontal",
+      },
+    },
   },
   keys = {
     {
