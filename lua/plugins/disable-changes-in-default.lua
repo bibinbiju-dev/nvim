@@ -18,4 +18,12 @@ return {
     "folke/noice.nvim",
     enabled = false,
   },
+
+  --which-key delay
+  {
+    "folke/which-key.nvim",
+    opts = {
+      delay = 800,
+    },
+  },
 }

@@ -9,21 +9,4 @@ vim.opt.guicursor = {
   "c:block", -- command
   "r:block", -- replace
 }
--- vim.opt.tabstop = 2
--- vim.opt.softtabstop = 2
--- vim.opt.shiftwidth = 2
--- vim.opt.expandtab = true
-vim.opt.shortmess:remove("I")
--- vim.opt.wrap = true
--- vim.opt.updatetime = 300
--- vim.opt.timeoutlen = 400
--- vim.opt.redrawtime = 1500
--- --set file encoding
--- vim.scriptencoding = "utf-8"
--- vim.opt.encoding = "utf-8"
--- vim.opt.fileencoding = "utf-8"
--- vim.opt.title = true
--- vim.opt.autoindent = true
--- vim.opt.smartindent = true
--- -- Optional: fileformats for reading
--- vim.o.fileformats = "unix,dos,mac"
+vim.opt.mouse = ""

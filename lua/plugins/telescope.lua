@@ -8,7 +8,7 @@ return {
           width = 0.9,
           height = 0.9,
           preview_height = 0.65,
-          mirror = true,
+          -- mirror = true,
         },
       },
     },
