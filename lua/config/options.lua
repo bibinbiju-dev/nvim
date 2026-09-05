@@ -3,10 +3,10 @@
 -- Add any additional options here
 
 vim.opt.guicursor = {
-  "n:block", -- normal
-  "i:block", -- insert
-  "v:block", -- visual
-  "c:block", -- command
-  "r:block", -- replace
+  "n:block",
+  "i:block",
+  "v:block",
+  "c:block",
+  "r:block",
 }
 vim.opt.mouse = ""

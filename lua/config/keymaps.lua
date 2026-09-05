@@ -4,7 +4,6 @@
 
 vim.keymap.set("n", "<leader>ha", ":Alpha<CR>", { desc = "Open Dashboard" })
 vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags)
 
 local builtin = require("telescope.builtin")
 
