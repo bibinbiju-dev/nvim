@@ -8,7 +8,14 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
-      explorer = { enabled = false },
+      picker = {
+        sources = {
+          explorer = {
+            hidden = true,
+          },
+        },
+      },
+      -- explorer = { enabled = false },
       dashboard = {
         enabled = false,
       },

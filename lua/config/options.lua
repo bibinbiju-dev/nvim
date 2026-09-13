@@ -9,4 +9,4 @@ vim.opt.guicursor = {
   "c:block",
   "r:block",
 }
-vim.opt.mouse = ""
+--vim.opt.mouse = ""

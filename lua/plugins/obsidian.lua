@@ -10,11 +10,11 @@ return {
     workspaces = {
       {
         name = "main",
-        path = "~/Documents/",
+        path = "~/Documents/Obsidian/",
       },
     },
     templates = {
-      subdir = "templates",
+      subdir = "Templates",
       date_format = "%d-%m-%Y",
       time_format = "%H:%M",
     },
