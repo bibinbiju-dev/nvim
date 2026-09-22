@@ -11,11 +11,11 @@ return {
       picker = {
         sources = {
           explorer = {
-            hidden = true,
+            -- hidden = true,
           },
         },
       },
-      -- explorer = { enabled = false },
+      explorer = { enabled = false },
       dashboard = {
         enabled = false,
       },
@@ -27,10 +27,10 @@ return {
   },
 
   --which-key delay
-  {
-    "folke/which-key.nvim",
-    opts = {
-      delay = 800,
-    },
-  },
+  -- {
+  --   "folke/which-key.nvim",
+  --   opts = {
+  --     delay = 800,
+  --   },
+  -- },
 }
