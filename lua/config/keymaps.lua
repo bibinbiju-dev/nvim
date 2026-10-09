@@ -7,11 +7,11 @@ vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
 
 local builtin = require("telescope.builtin")
 
-vim.keymap.set("n", "<leader>ff", function()
+vim.keymap.set("n", "<leader>fF", function()
   LazyVim.pick("files", { root = false })()
 end, { desc = "Find Files (cwd)" })
 
-vim.keymap.set("n", "<leader>fF", function()
+vim.keymap.set("n", "<leader>ff", function()
   LazyVim.pick("files")()
 end, { desc = "Find Files (Root Dir)" })
 

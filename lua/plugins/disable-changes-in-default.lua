@@ -15,7 +15,7 @@ return {
           },
         },
       },
-      explorer = { enabled = false },
+      --explorer = { enabled = false },
       dashboard = {
         enabled = false,
       },
