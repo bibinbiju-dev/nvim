@@ -3,7 +3,7 @@ return {
   event = { "BufReadPost", "BufNewFile" }, -- lazy load when opening files
   config = function()
     require("colorizer").setup({
-      filetypes = { "css", "html", "hyprlang" },
+      filetypes = { "css", "html", "hyprlang", "javascriptreact", "js" },
       user_default_options = {
         RGB = true,
         RRGGBB = true,
@@ -14,7 +14,7 @@ return {
         hsl_fn = true, -- hsl(), hsla()
         css = true,
         css_fn = true,
-        mode = "foreground",
+        mode = "background",
       },
     })
   end,
