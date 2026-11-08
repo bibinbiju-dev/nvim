@@ -15,23 +15,23 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-vim.api.nvim_create_autocmd("BufReadPost", {
-  pattern = {
-    "*.png",
-    "*.jpg",
-    "*.jpeg",
-    "*.webp",
-    "*.gif",
-    "*.ico",
-    "*.svg",
-  },
-  callback = function()
-    local file = vim.fn.expand("%:p")
-
-    vim.fn.jobstart({ "gio", "open", file }, { detach = true })
-
-    vim.schedule(function()
-      vim.cmd("bd!")
-    end)
-  end,
-})
+-- vim.api.nvim_create_autocmd("BufReadPost", {
+--   pattern = {
+--     "*.png",
+--     "*.jpg",
+--     "*.jpeg",
+--     "*.webp",
+--     "*.gif",
+--     "*.ico",
+--     "*.svg",
+--   },
+--   callback = function()
+--     local file = vim.fn.expand("%:p")
+--
+--     vim.fn.jobstart({ "gio", "open", file }, { detach = true })
+--
+--     vim.schedule(function()
+--       vim.cmd("bd!")
+--     end)
+--   end,
+-- })

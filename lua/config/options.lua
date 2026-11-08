@@ -12,5 +12,5 @@ vim.opt.guicursor = {
 vim.opt.mouse = ""
 
 -- vim.opt.wrap = true -- Enable line wrapping
-vim.opt.linebreak = true -- Wrap lines at convenient points (like spaces) instead of mid-word
-vim.opt.textwidth = 0 -- Prevent hard wrapping while typing
+-- vim.opt.linebreak = true -- Wrap lines at convenient points (like spaces) instead of mid-word
+-- vim.opt.textwidth = 0 -- Prevent hard wrapping while typing
